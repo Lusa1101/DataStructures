@@ -28,7 +28,7 @@ int* list = malloc(sizeof(int) * size);
 
 sublistSize -= 1;
 
-// Copy the array elements in the list
+// Set the index-first elements in the list
 for (int i = 0; i < size; i++)
 list[i] = array[i];
 
@@ -52,11 +52,11 @@ int currentElement;
 // Hello message
 printf("Hello, user. \nThis program is illustrates sorting a list using the insertion method.\n");
 
-// We need to start by copying the elements of the list and insert them into the sublist
+// We need to start by taking the first element of the list and insert it into the sublist
 for (int i = 0; i < size; i++)
 sublist[i] = list[i];
-
 printf("\nInserted the first element into the sublist.\n");
+printArray(sublist, 1);
 
 for (int i = 1; i < size; i++)
 {
@@ -80,6 +80,7 @@ break;
 } // 2nd for
 
 // Check the new list
+printArray(list, size);
 printArray(sublist, size);
 
 } // 1st for
